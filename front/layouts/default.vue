@@ -21,7 +21,7 @@
         </ul>
       </layout-container>
     </header>
-    <main class="flex-auto">
+    <main class="flex-auto pb-16">
       <slot />
     </main>
     <footer class="py-4 bg-tufts-blue text-white">
