@@ -16,14 +16,14 @@ class StorySeeder extends Seeder
     public function run(): void
     {
         //
-
+        
+        $images = UnsplashImage::inRandomOrder()->get();
         foreach (range(1,18) as $key) {
 
-            $image = UnsplashImage::inRandomOrder()->first();
             $user = User::inRandomOrder()->first();
             
             Story::factory()->create([
-                "image_id" => $image->id,
+                "image_id" => $images[$key - 1]->id,
                 "user_id" => $user->id,
             ]);
         }
