@@ -14,6 +14,23 @@ class UnsplashImageResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        // return parent::toArray($request);
+
+        return [
+            "id" => $this->id,
+            "photo_id" => $this->photo_id,
+            "description" => $this->description,
+            "urls" => [
+                "full" => $this->url_full,
+                "regular" => $this->url_regular,
+                "small" => $this->url_small,
+            ],
+            "creator" => [
+                "name" => $this->creator_name,
+                "username" => $this->creator_username,
+                "profile_photo" => $this->creator_profile_photo,
+                "profile_url" => $this->creator_profile_url,   
+            ]
+        ];
     }
 }

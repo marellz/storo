@@ -35,9 +35,9 @@ class UnsplashImageSeeder extends Seeder
                     UnsplashImage::create([
                         "photo_id" => $image['id'],
                         "description" => $image['description'] ?? 'No description',
-                        "url_full" => $image['urls']['raw'],
-                        "url_regular" => $image['urls']['raw'],
-                        "url_small" => $image['urls']['raw'],
+                        "url_full" => $image['urls']['full'],
+                        "url_regular" => $image['urls']['regular'],
+                        "url_small" => $image['urls']['small'],
                         "creator_name" => $image['user']['name'],
                         "creator_username" => $image['user']['username'],
                         "creator_profile_photo" => $image['user']['profile_image']['small'],
