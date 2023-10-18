@@ -21,4 +21,9 @@ class Story extends Model
     {
         
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

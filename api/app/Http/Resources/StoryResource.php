@@ -20,8 +20,10 @@ class StoryResource extends JsonResource
         return [
             "id" => $this->id,
             "title" => $this->title,
-            "image" => UnsplashImage::find($this->image_id),
+            "slug" => $this->slug,
+            "image" => new UnsplashImageResource(UnsplashImage::find($this->image_id)),
             "user" => new UserResource($this->user),
+            "excerpt" => $this->excerpt,
             "content" => $this->content,
             "published" => !!$this->published,
         ];

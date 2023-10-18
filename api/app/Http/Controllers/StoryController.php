@@ -41,7 +41,8 @@ class StoryController extends Controller
      */
     public function show(Story $story)
     {
-        //
+        $data['story'] = new StoryResource($story);
+        return $this->respond($data);
     }
 
     /**
