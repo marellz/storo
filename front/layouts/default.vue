@@ -49,13 +49,21 @@
 </template>
 <script lang="ts" setup>
 const links = ref([
+  // {
+  //   path: "/author",
+  //   label: "Author",
+  // },
+  // {
+  //   path: "/about",
+  //   label: "About",
+  // },
   {
-    path: "/author",
-    label: "Author",
+    path: "/auth/login",
+    label: "Login",
   },
   {
-    path: "/about",
-    label: "About",
+    path: "/auth/register",
+    label: "Register",
   },
 ]);
 
