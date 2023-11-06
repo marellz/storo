@@ -1,73 +1,98 @@
 <template>
   <div class="flex flex-col h-[100vh]">
-    <header class="py-4">
-      <layout-container class="flex flex-col lg:flex-row items-center">
-        <nuxt-link to="/">
-          <img
-            src="@/assets/images/logos/logo-black.png"
-            class="h-32 lg:h-64"
-            alt=""
-          />
-        </nuxt-link>
-        <ul class="flex items-center lg:ml-20 py-5 lg:py-0">
-          <li v-for="(link, index) in links" :key="index" class="flex flex-col">
-            <nuxt-link
-              :to="link.path"
-              class="px-8 lg:text-lg font-medium after:block after:w-full after:h-1 after:bg-transparent"
-              :class="{ 'after:bg-pink-lavender text-tufts-blue': linkIsActive(link.path) }"
-              >{{ link.label }}</nuxt-link
-            >
-          </li>
-        </ul>
-      </layout-container>
-    </header>
-    <main class="flex-auto pb-16">
-      <slot />
-    </main>
-    <footer class="py-4 bg-tufts-blue text-white">
-      <layout-container class="grid grid-cols-2 lg:grid-cols-3">
-        <div class="flex justify-center lg:justify-start">
-          <img
-            src="@/assets/images/logos/logo-color.jpeg"
-            class="h-32 lg:h-64"
-            alt=""
-          />
-        </div>
-        <div class="lg:col-start-3 py-5 lg:py-10">
-            <ul class="flex flex-col">
-                <li v-for="(link, index) in links" :key="index">
-                    <nuxt-link :to="link.path" class="p-2 block">
-                    {{ link.label }}</nuxt-link>
-                </li>
-            </ul>
-        </div>
+    <main class="flex flex-auto">
 
-        <p class="font-light">Made by Dave. 2023.</p>
-      </layout-container>
-    </footer>
+      <!-- nav  -->
+      <div class="w-64">
+        <div class="rounded-lg sticky top-6 py-5">
+          <div class="mb-10 px-5">
+            <nuxt-link to="/">
+              <img
+                src="@/assets/images/logos/logo-black.png"
+                class="h-12"
+                alt=""
+              />
+            </nuxt-link>
+          </div>
+          <ul
+            class="border-b border-b-slate-300 last:border-b-0 mb-5 pb-5 space-y-2"
+            v-for="(group, index) in links"
+            :key="index"
+          >
+            <li v-for="(link, index) in group" :key="index">
+              <nuxt-link
+                :to="link.path"
+                class="py-2 px-5 flex items-center space-x-2 border-r-2 border-r-transparent"
+                :class="{ 'text-tufts-blue border-r-tufts-blue bg-blue-50': link.path == route.path }"
+              >
+                <component v-if="link.icon" :is="link.icon" class="h-5" />
+                <span>
+                  {{ link.label }}
+                </span>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-auto overflow-auto h-full bg-slate-100 pb-16">
+        <layout-header />
+        <slot />
+      </div>
+    </main>
   </div>
 </template>
 <script lang="ts" setup>
+import {
+  BookmarkSquareIcon,
+  BuildingStorefrontIcon,
+  ChatBubbleLeftRightIcon,
+  GlobeAmericasIcon,
+  MegaphoneIcon,
+  NewspaperIcon,
+UserGroupIcon,
+} from "@heroicons/vue/24/outline";
+
 const links = ref([
-  // {
-  //   path: "/author",
-  //   label: "Author",
-  // },
-  // {
-  //   path: "/about",
-  //   label: "About",
-  // },
-  {
-    path: "/auth/login",
-    label: "Login",
-  },
-  {
-    path: "/auth/register",
-    label: "Register",
-  },
+  [
+    {
+      label: "Feed",
+      icon: GlobeAmericasIcon,
+      path: "/",
+    },
+    {
+      label: "Blog",
+      icon: NewspaperIcon,
+      path: "/blog",
+    },
+    {
+      label: "Events",
+      icon: BookmarkSquareIcon,
+      path: "#",
+    },
+    {
+      label: "Community",
+      icon: MegaphoneIcon,
+      path: "#",
+    },
+    {
+      label: "Shop",
+      icon: BuildingStorefrontIcon,
+      path: "#",
+    },
+  ],
+  [
+    {
+      label: "Follows",
+      icon: UserGroupIcon,
+      path: "#",
+    },
+    {
+      label: "Messages",
+      icon: ChatBubbleLeftRightIcon,
+      path: "#",
+    },
+  ],
 ]);
 
-const route = useRoute();
-
-const linkIsActive = (path: string) => route.path === path;
+const route = useRoute()
 </script>

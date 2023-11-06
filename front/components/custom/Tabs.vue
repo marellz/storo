@@ -1,14 +1,13 @@
 <template>
-  <ul class="flex">
+  <ul class="flex items-center space-x-3">
     <li v-for="(tab, index) in tabs" :key="index" class="py-1">
-      <button
-        type="button"
+      <custom-button-action
         @click="activeTab = tab.key"
-        class="border-b-2 border-b-gray-100 text-gray-500 font-medium px-8 py-2"
-        :class="{ '!border-b-primary !text-primary': activeTab == tab.key }"
+        class=""
+        :class="{ '!border-tufts-blue !text-tufts-blue': activeTab == tab.key }"
       >
         {{ tab.label }}
-      </button>
+      </custom-button-action>
     </li>
   </ul>
 
@@ -24,12 +23,11 @@
 <script setup>
 const props = defineProps({
   tabs: {
-    type: String,
+    type: Array,
     required: true,
   },
   defaultTab: {
     type: String,
-    default: "tab-1",
   },
 });
 

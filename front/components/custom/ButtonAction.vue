@@ -11,15 +11,16 @@
 defineProps({
   type: {
     type: String,
-    default: false,
+    default: 'button',
   },
   color: {
     type: String,
-    default: "info",
+    default: "default",
   },
 });
 
 const colors = {
+  default: "border text-slate-500",
   info: "text-primary bg-blue-100 hover:bg-blue-200", // blue,
   warning: "text-amber-500 bg-amber-100", // amber,
   error: "text-red-500 bg-red-100", // red,
