@@ -1,7 +1,7 @@
 <template>
   <component
     :is="preferredComponent"
-    class="inline-flex justify-center items-center py-2 text-lg px-6 font-bold rounded whitespace-nowrap hover:opacity-80 disabled:opacity-50"
+    class="inline-flex justify-center items-center py-2 text-lg px-6 font-medium rounded whitespace-nowrap hover:opacity-80 disabled:opacity-50"
     :disabled="disabled"
     :type="btnType"
     :to="to"
