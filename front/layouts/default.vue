@@ -1,7 +1,6 @@
 <template>
   <div class="flex flex-col h-[100vh]">
     <main class="flex flex-auto">
-
       <!-- nav  -->
       <div class="w-64">
         <div class="rounded-lg sticky top-6 py-5">
@@ -22,8 +21,11 @@
             <li v-for="(link, index) in group" :key="index">
               <nuxt-link
                 :to="link.path"
-                class="py-2 px-5 flex items-center space-x-2 border-r-2 border-r-transparent"
-                :class="{ 'text-tufts-blue border-r-tufts-blue bg-blue-50': link.path == route.path }"
+                class="py-2 px-5 flex items-center space-x-2 border-r-2 border-r-transparent text-slate-600"
+                :class="{
+                  '!text-tufts-blue border-r-tufts-blue bg-blue-50':
+                    pathMatches(link.path),
+                }"
               >
                 <component v-if="link.icon" :is="link.icon" class="h-5" />
                 <span>
@@ -49,7 +51,7 @@ import {
   GlobeAmericasIcon,
   MegaphoneIcon,
   NewspaperIcon,
-UserGroupIcon,
+  UserGroupIcon,
 } from "@heroicons/vue/24/outline";
 
 const links = ref([
@@ -94,5 +96,11 @@ const links = ref([
   ],
 ]);
 
-const route = useRoute()
+const route = useRoute();
+const pathMatches = (path) => {
+  if (path === "/") {
+    return path == route.path;
+  }
+  return path == route.path || route.path.includes(path);
+};
 </script>
