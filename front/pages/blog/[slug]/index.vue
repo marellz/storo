@@ -19,6 +19,7 @@
         </div>
 
         <blog-author title="About the author" />
+        
       </div>
       <div class="col-span-2 space-y-10">
         <layout-card class="space-y-10">
@@ -78,9 +79,6 @@
           </div>
           <div class="space-y-5">
             <blog-comment />
-          </div>
-          <div>
-
           </div>
         </layout-card>
       </div>
