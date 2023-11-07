@@ -1,6 +1,6 @@
 <template>
   <layout-card>
-    <h1 class="text-lg font-semibold">Subscribe to our newsletter</h1>
+    <h1 class="text-lg font-semibold">Subscribe to our blog</h1>
     <div class="mt-4">
       <form @submit.prevent="">
         <form-input type="email" placeholder="Email" required />

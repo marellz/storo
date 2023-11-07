@@ -9,13 +9,15 @@
         {{ tab.label }}
       </custom-button-action>
     </li>
+
+    <slot name="action"/>
   </ul>
 
   <div
     v-for="(tab, index) in tabs"
     :key="index"
     v-show="activeTab == tab.key"
-    class="px-3 pt-10"
+    class="pt-10"
   >
     <slot :name="tab.key"></slot>
   </div>
