@@ -41,7 +41,7 @@
           <custom-button-action
             class="w-full border space-x-2 rounded ml-auto hover:text-tufts-blue hover:border-tufts-blue"
           >
-            <hand-raised-icon class="h-5" />
+            <user-plus-icon class="h-5" />
             <span>Join/Request</span>
           </custom-button-action>
 
@@ -73,21 +73,13 @@
 </template>
 <script lang="ts" setup>
 import {
-  BookmarkIcon,
-  HeartIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  ShareIcon,
-  HandRaisedIcon,
-  ChevronUpDownIcon,
-  BarsArrowDownIcon,
-  BarsArrowUpIcon,
-  FireIcon,
+  UserPlusIcon,
   UserGroupIcon,
   RectangleStackIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/vue/24/outline";
 
-import { UserCircleIcon, CalendarDaysIcon } from "@heroicons/vue/24/solid";
+import { CalendarDaysIcon } from "@heroicons/vue/24/solid";
 
 const orderBy = ref('')
 </script>
