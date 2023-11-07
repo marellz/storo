@@ -4,6 +4,7 @@
       :id="id"
       v-model="val"
       class="radio"
+      :name="name"
       type="radio"
       :value="inputValue"
     />
@@ -33,6 +34,10 @@ const props = defineProps({
     default: null,
   },
   labelClass: {
+    type: String,
+    default: "",
+  },
+  name: {
     type: String,
     default: "",
   },
