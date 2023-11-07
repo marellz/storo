@@ -46,12 +46,11 @@
 <script lang="ts" setup>
 import {
   BookmarkSquareIcon,
-  BuildingStorefrontIcon,
   ChatBubbleLeftRightIcon,
   GlobeAmericasIcon,
   MegaphoneIcon,
   NewspaperIcon,
-  UserGroupIcon,
+  UserIcon,
 } from "@heroicons/vue/24/outline";
 
 const links = ref([
@@ -84,9 +83,9 @@ const links = ref([
   ],
   [
     {
-      label: "Follows",
-      icon: UserGroupIcon,
-      path: "#",
+      label: "Profile",
+      icon: UserIcon,
+      path: `/user/id`,
     },
     {
       label: "Messages",
