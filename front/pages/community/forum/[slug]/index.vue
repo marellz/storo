@@ -54,25 +54,7 @@
           <div>
             <div class="border-t py-5 flex justify-between">
               <h5 class="text-lg font-medium">Forum responses</h5>
-              <custom-dropdown label="Select order">
-                <template #trigger>
-                  <span>Order</span>
-                  <chevron-up-down-icon class="h-5" />
-                </template>
-
-                <custom-dropdown-item>
-                  <FireIcon class="h-5" />
-                  <span>Relevant</span>
-                </custom-dropdown-item>
-                <custom-dropdown-item>
-                  <BarsArrowDownIcon class="h-5" />
-                  <span>Latest</span>
-                </custom-dropdown-item>
-                <custom-dropdown-item>
-                  <BarsArrowUpIcon class="h-5" />
-                  <span>Oldest</span>
-                </custom-dropdown-item>
-              </custom-dropdown>
+              <filter-order label="Order responses by" />
             </div>
             <div class="-mx-5">
               <blog-comment />

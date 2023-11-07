@@ -58,25 +58,7 @@
       <div class="col-span-2 space-y-10">
         <post-creation />
         <div class="py-5 flex justify-end">
-          <custom-dropdown label="Select order" trigger-class="!bg-transparent">
-            <template #trigger>
-              <span>Posts order</span>
-              <chevron-up-down-icon class="h-5" />
-            </template>
-
-            <custom-dropdown-item>
-              <FireIcon class="h-5" />
-              <span>Relevant</span>
-            </custom-dropdown-item>
-            <custom-dropdown-item>
-              <BarsArrowDownIcon class="h-5" />
-              <span>Latest</span>
-            </custom-dropdown-item>
-            <custom-dropdown-item>
-              <BarsArrowUpIcon class="h-5" />
-              <span>Oldest</span>
-            </custom-dropdown-item>
-          </custom-dropdown>
+          <filter-order label="Order posts by" v-model="orderBy"/>
         </div>
         <layout-card class="space-y-5">
           <div class="-mx-5">
@@ -105,4 +87,6 @@ import {
 } from "@heroicons/vue/24/outline";
 
 import { UserCircleIcon, CalendarDaysIcon } from "@heroicons/vue/24/solid";
+
+const orderBy = ref('')
 </script>

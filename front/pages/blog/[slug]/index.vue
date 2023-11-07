@@ -57,25 +57,8 @@
           <div class="flex justify-between px-5">
             <h2 class="text-xl font-semibold">Comments</h2>
 
-            <custom-dropdown label="Select order">
-              <template #trigger>
-                <span>Order</span>
-                <chevron-up-down-icon class="h-5" />
-              </template>
+            <filter-order />
 
-              <custom-dropdown-item>
-                <FireIcon class="h-5" />
-                <span>Relevant</span>
-              </custom-dropdown-item>
-              <custom-dropdown-item>
-                <BarsArrowDownIcon class="h-5" />
-                <span>Latest</span>
-              </custom-dropdown-item>
-              <custom-dropdown-item>
-                <BarsArrowUpIcon class="h-5" />
-                <span>Oldest</span>
-              </custom-dropdown-item>
-            </custom-dropdown>
           </div>
           <div class="space-y-5">
             <blog-comment />
@@ -92,10 +75,6 @@ import {
   HeartIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   ShareIcon,
-  ChevronUpDownIcon,
-  BarsArrowDownIcon,
-  BarsArrowUpIcon,
-  FireIcon,
 } from "@heroicons/vue/24/outline";
 
 const route = useRoute();
