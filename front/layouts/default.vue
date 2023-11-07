@@ -69,7 +69,7 @@ const links = ref([
     {
       label: "Events",
       icon: BookmarkSquareIcon,
-      path: "#",
+      path: "/events",
     },
     {
       label: "Community",
