@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="link">
+  <nuxt-link :to="link" class="block">
     <layout-card>
       <div class="space-y-3">
         <div class="flex items-center space-x-2">
