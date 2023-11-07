@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-col mb-2">
-    <label v-if="label" :for="id" class="font-medium mb-2 text-gray-700" :class="{'opacity-50': disabled}">
-      <slot>
+    <slot name="label">
+      <label v-if="label" :for="id" class="font-medium mb-2 text-gray-700" :class="{'opacity-50': disabled}">
         <p class="m-0">
           {{ label }}
         </p>
-      </slot>
-    </label>
+      </label>
+    </slot>
     <input
       :id="id"
       v-model="mValue"
@@ -24,13 +24,17 @@
     </div>
 
     <slot name="help">
-      <div class="mt-2 text-xs">
-        {{ help }}
+      <div class="mt-2 text-sm text-slate-500 flex items-center space-x-2" v-if="help">
+        <question-mark-circle-icon class="h-5" />
+        <span>
+          {{ help }}
+        </span>
       </div>
     </slot>
   </div>
 </template>
 <script setup lang="ts">
+import { QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
 const props = defineProps({
   modelValue: {
     type: [String, Number, Boolean, Object],
@@ -65,10 +69,6 @@ const props = defineProps({
     default: null,
   },
   help: {
-    type: String,
-    default: null,
-  },
-  hint: {
     type: String,
     default: null,
   },

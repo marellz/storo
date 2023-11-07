@@ -1,10 +1,15 @@
 <template>
   <div class="flex flex-col">
     <slot name="label">
-      <label v-if="label" :for="id">
-        <h3 class="text-xl font-bold mb-5">
+      <label
+        v-if="label"
+        :for="id"
+        class="font-medium mb-2 text-gray-700"
+        :class="{ 'opacity-50': disabled }"
+      >
+        <p class="m-0">
           {{ label }}
-        </h3>
+        </p>
       </label>
     </slot>
     <textarea
@@ -56,16 +61,16 @@ const props = defineProps({
   },
   rows: {
     type: [Number, String],
-    default: 10,
+    default: 2,
   },
-})
+});
 
-const emit = defineEmits(["update:model-value"])
-const id = Math.random().toString(36).substring(7)
+const emit = defineEmits(["update:model-value"]);
+const id = Math.random().toString(36).substring(7);
 const mValue = computed({
   get: () => props.modelValue,
   set: (v) => {
-    emit("update:model-value", v)
+    emit("update:model-value", v);
   },
-})
+});
 </script>
