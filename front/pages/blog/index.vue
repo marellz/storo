@@ -26,7 +26,7 @@
           </custom-tabs>
         </div>
       
-        <div class="space-y-4">
+        <div class="space-y-4 mt-[90px]">
           <blog-subscription-form />
           <blog-author title="Top author" />
         </div>
