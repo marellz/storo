@@ -76,11 +76,11 @@ const links = ref([
       icon: MegaphoneIcon,
       path: "/community",
     },
-    {
-      label: "Shop",
-      icon: BuildingStorefrontIcon,
-      path: "#",
-    },
+    // {
+    //   label: "Shop",
+    //   icon: BuildingStorefrontIcon,
+    //   path: "#",
+    // },
   ],
   [
     {
