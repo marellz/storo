@@ -74,7 +74,7 @@ const links = ref([
     {
       label: "Community",
       icon: MegaphoneIcon,
-      path: "#",
+      path: "/community",
     },
     {
       label: "Shop",
