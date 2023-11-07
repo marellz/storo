@@ -4,5 +4,5 @@
   </div>
 </template>
 <script lang="ts" setup>
-defineEmits("click");
+defineEmits(["click"]);
 </script>
