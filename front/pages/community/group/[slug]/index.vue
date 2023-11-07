@@ -57,7 +57,8 @@
       </div>
       <div class="col-span-2 space-y-10">
         <post-creation />
-        <div class="py-5 flex justify-end">
+        <div class="flex items-center justify-between">
+          <h5 class="text-xl font-medium">Community feed</h5>
           <filter-order label="Order posts by" v-model="orderBy"/>
         </div>
         <layout-card class="space-y-5">

@@ -29,14 +29,13 @@
             </div>
           </div>
         </div>
-
-        <div class="!mt-5 flex justify-end"></div>
       </div>
     </layout-card>
   </nuxt-link>
 </template>
 
 <script lang="ts" setup>
+
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 import { ChatBubbleLeftRightIcon } from "@heroicons/vue/24/solid";
 

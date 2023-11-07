@@ -8,7 +8,7 @@
           alt=""
         />
       </div>
-      <div class="col-span-2">
+      <div class="col-span-2 space-y-10">
         <layout-card class="space-y-5">
           <h1 class="text-4xl font-medium">A nice forum topic</h1>
           <div class="text-slate-700 space-y-3`">
@@ -50,16 +50,16 @@
               <bookmark-icon class="h-5" />
             </custom-button-action>
           </div>
+        </layout-card>
 
-          <div>
-            <div class="border-t py-5 flex justify-between">
-              <h5 class="text-lg font-medium">Forum responses</h5>
-              <filter-order label="Order responses by" />
-            </div>
-            <div class="-mx-5">
-              <blog-comment />
-              <blog-comment />
-            </div>
+        <div class="flex items-center justify-between">
+          <h5 class="text-xl font-medium">Forum responses</h5>
+          <filter-order label="Order responses by" />
+        </div>
+        <layout-card>
+          <div class="-mx-5">
+            <blog-comment />
+            <blog-comment />
           </div>
         </layout-card>
       </div>
@@ -78,6 +78,5 @@ import {
   FireIcon,
 } from "@heroicons/vue/24/outline";
 
-
-import {UserCircleIcon} from "@heroicons/vue/24/solid";
+import { UserCircleIcon } from "@heroicons/vue/24/solid";
 </script>
