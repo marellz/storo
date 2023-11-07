@@ -43,7 +43,12 @@ import { MapPinIcon } from "@heroicons/vue/24/solid";
 defineProps({
   eventInfo: {
     type: Object,
-    required: true,
+    default: () => {
+      return {
+        date: 13,
+        monthShort: "OCT",
+      };
+    },
   },
 });
 
