@@ -37,6 +37,11 @@
               </div>
               <form-input required label="Email" type="email" />
               <form-input required label="Contact" />
+              <div class="md:col-span-2">
+                <h3 class="font-medium text-slate-400">Location information</h3>
+              </div>
+              <form-input required label="City" />
+              <form-input required label="Country" />
               <form-textarea required label="Address" class="md:col-span-2" />
               <div class="md:col-span-2 flex justify-end row-st">
                 <custom-button class="space-x-2">
