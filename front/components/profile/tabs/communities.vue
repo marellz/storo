@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-10">
-    <div class="grid grid-cols-2 gap-10">
+    <div class="grid lg:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2 gap-10">
       <div>
         <custom-tabs :tabs="tabs" default-tab="groups">
           <template #action>
@@ -9,7 +9,7 @@
           <template #groups>
             <div class="space-y-5">
               <h2 class="font-medium text-lg">Your community groups</h2>
-              <custom-scroll class="space-y-2" max-height="max-h-[50vh]">
+              <custom-scroll class="space-y-2" max-height="max-h-[70vh]">
                 <community-group
                   v-for="i in 4"
                   :key="i"
@@ -20,7 +20,7 @@
           <template #forums>
             <div class="space-y-5">
               <h2 class="font-medium text-lg">Forums you take part in</h2>
-              <custom-scroll class="space-y-2" max-height="max-h-[50vh]">
+              <custom-scroll class="space-y-2" max-height="max-h-[70vh]">
                 <community-forum v-for="i in 3" :key="i" />
               </custom-scroll>
             </div>

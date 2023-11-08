@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-10">
-    <div class="grid grid-cols-2 gap-10">
+    <div class="grid md:grid-cols-2 gap-10">
       <div>
         <custom-tabs :tabs="tabs" default-tab="followers">
           <template #action>
@@ -29,7 +29,7 @@
         </custom-tabs>
       </div>
 
-      <div class="space-y-10 mt-[90px]">
+      <div class="space-y-10 md:mt-[127px] 2xl:mt-[90px]">
         <div class="space-y-5">
           <h2 class="font-medium text-lg">Suggestions</h2>
           <custom-scroll class="space-y-2">

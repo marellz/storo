@@ -1,6 +1,6 @@
 <template>
   <layout-container>
-    <div class="grid grid-cols-3 gap-10">
+    <div class="grid xl:grid-cols-3 gap-10">
       <div>
         <layout-card class="space-y-5 flex flex-col items-center">
           <div class="text-center py-5">
@@ -47,7 +47,7 @@
           </custom-button-action>
         </layout-card>
       </div>
-      <div class="col-span-2">
+      <div class="xl:col-span-2">
         <custom-tabs :tabs="tabs" default-tab="posts">
           <template #posts>
             <profile-tabs-posts />
