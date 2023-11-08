@@ -104,7 +104,4 @@ const tabs = ref([
   },
 ]);
 
-
-
-
 </script>

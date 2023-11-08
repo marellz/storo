@@ -59,16 +59,5 @@
   </layout-container>
 </template>
 <script lang="ts" setup>
-import {
-  BookmarkIcon,
-  HeartIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  ShareIcon,
-  ChevronUpDownIcon,
-  BarsArrowDownIcon,
-  BarsArrowUpIcon,
-  FireIcon,
-} from "@heroicons/vue/24/outline";
-
 import { UserCircleIcon } from "@heroicons/vue/24/solid";
 </script>

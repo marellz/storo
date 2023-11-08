@@ -16,7 +16,7 @@
 
       <ul class="flex items-center !ml-auto">
         <li
-          v-for="(link, index) in authLinks"
+          v-for="(link, index) in links"
           :key="index"
           class="flex flex-col"
         >
@@ -38,7 +38,7 @@ defineProps({
   }
 })
 
-const authLinks = ref([
+const links = ref([
   {
     path: "/auth/login",
     label: "Login",
