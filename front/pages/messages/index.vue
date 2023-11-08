@@ -1,13 +1,14 @@
 <template>
   <layout-container>
     <layout-salutation main="Messages"> </layout-salutation>
-    <layout-card class="!p-0 border overflow-hidden">
-      <div class="flex h-[75vh]">
-        <div class="flex-auto flex flex-col w-1/3 border-r">
+    <layout-card class="!p-0 border overflow-hidden relative">
+      <div class="flex h-[75vh] overflow-hidden">
+        <div class="flex-none flex flex-col w-full xl:w-1/3 absolute xl:static z-10 h-full bg-white xl:border-r transform -translate-x-full transition ease-in-out xl:transform-none" 
+        :class="{'translate-x-0': selectedThread == null}">
           <message-list-search />
           <custom-scroll class="flex-auto h-full bg-slate-100 pr-0">
             <message-list-item
-              v-for="i in 10"
+              v-for="i in 100"
               :key="i"
               :index="i"
               :unread="i == 2 ? 2 : 0"
@@ -16,9 +17,11 @@
             />
           </custom-scroll>
         </div>
-        <div class="flex-auto flex flex-col w-2/3">
+
+        
+        <div class="flex-none flex flex-col w-full xl:w-2/3">
           <template v-if="selectedThread">
-            <message-thread-banner />
+            <message-thread-banner @go-back="selectedThread = null" />
             <div
               class="flex flex-col-reverse overflow-auto bg-slate-100 px-5 flex-auto"
             >
@@ -30,6 +33,8 @@
           </template>
           <message-thread-empty v-else />
         </div>
+
+
       </div>
     </layout-card>
   </layout-container>
