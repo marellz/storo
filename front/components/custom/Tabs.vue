@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex items-center space-x-3">
+  <ul class="flex flex-wrap items-center space-x-3">
     <li v-for="(tab, index) in tabs" :key="index" class="py-1">
       <custom-button-action
         @click="activeTab = tab.key"
