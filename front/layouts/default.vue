@@ -31,6 +31,11 @@
                 <span>
                   {{ link.label }}
                 </span>
+                <span
+                  v-if="link.notifications"
+                  class="text-xs !ml-auto font-bold text-white bg-tufts-blue w-4 h-4 inline-flex justify-center items-center rounded-full"
+                  >{{ link.notifications }}</span
+                >
               </nuxt-link>
             </li>
           </ul>
@@ -90,7 +95,8 @@ const links = ref([
     {
       label: "Messages",
       icon: ChatBubbleLeftRightIcon,
-      path: "#",
+      path: "/messages",
+      notifications: 2,
     },
   ],
 ]);
