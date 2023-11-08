@@ -7,27 +7,36 @@
         <p class="text-slate-500 text-sm">13 mutual followers</p>
       </div>
     </nuxt-link>
-    <template v-if="following">
+    <div class="flex items-center space-x-2 ml-auto">
       <custom-button-action
-        class="border space-x-2 rounded ml-auto hover:bg-red-500 hover:border-red-500 hover:text-white"
+        class="border space-x-2 rounded hover:text-tufts-blue hover:border-tufts-blue"
       >
-        <user-minus-icon class="h-5" />
-        <span>Unfollow</span>
+        <paper-airplane-icon class="h-5" />
       </custom-button-action>
-    </template>
-    <template v-else>
+      <template v-if="following">
+        <custom-button-action
+          class="border space-x-2 rounded hover:bg-red-500 hover:border-red-500 hover:text-white"
+        >
+          <user-minus-icon class="h-5" />
+        </custom-button-action>
+      </template>
+
       <custom-button-action
-        class="border space-x-2 rounded ml-auto hover:text-tufts-blue hover:border-tufts-blue"
+        v-else
+        class="border space-x-2 rounded hover:text-tufts-blue hover:border-tufts-blue"
       >
         <user-plus-icon class="h-5" />
-        <span>Follow</span>
       </custom-button-action>
-    </template>
+    </div>
   </layout-card>
 </template>
 <script lang="ts" setup>
 import { UserCircleIcon } from "@heroicons/vue/24/solid";
-import { UserPlusIcon, UserMinusIcon } from "@heroicons/vue/24/outline";
+import {
+  UserPlusIcon,
+  UserMinusIcon,
+  PaperAirplaneIcon,
+} from "@heroicons/vue/24/outline";
 
 defineProps({
   following: {
