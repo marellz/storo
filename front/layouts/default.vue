@@ -12,4 +12,14 @@
 </template>
 <script lang="ts" setup>
 const navActive = ref(false);
+
+const route = useRoute();
+
+watch(
+  () => route.path,
+  () => {
+    navActive.value = false
+  },
+  { deep: true }
+);
 </script>
