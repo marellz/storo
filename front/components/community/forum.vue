@@ -7,9 +7,9 @@
           <arrow-top-right-on-square-icon class="h-5 text-slate-400" />
         </div>
 
-        <div class="flex space-x-5">
+        <div class="flex flex-col xl:flex-row space-y-5 xl:space-y-0 xl:space-x-5">
           <img
-            class="w-32 h-32 rounded-lg"
+            class="w-full h-48 xl:w-48 object-cover rounded-lg"
             src="https://images.unsplash.com/photo-1530685932526-48ec92998eaa?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />

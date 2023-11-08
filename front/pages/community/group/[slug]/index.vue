@@ -1,6 +1,6 @@
 <template>
   <layout-container>
-    <div class="grid grid-cols-3 gap-10">
+    <div class="grid xl:grid-cols-3 gap-10">
       <div>
         <layout-card class="space-y-5 flex flex-col items-start">
           <img
@@ -55,7 +55,7 @@
           </div>
         </layout-card>
       </div>
-      <div class="col-span-2 space-y-10">
+      <div class="xl:col-span-2 space-y-10">
         <post-creation />
         <div class="flex items-center justify-between">
           <h5 class="text-xl font-medium">Community feed</h5>

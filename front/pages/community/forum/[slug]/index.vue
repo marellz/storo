@@ -1,6 +1,6 @@
 <template>
   <layout-container>
-    <div class="grid grid-cols-3 gap-10">
+    <div class="grid xl:grid-cols-3 gap-10">
       <div>
         <img
           class="w-full object-cover rounded-lg"
@@ -8,7 +8,7 @@
           alt=""
         />
       </div>
-      <div class="col-span-2 space-y-10">
+      <div class="xl:col-span-2 space-y-10">
         <layout-card class="space-y-5">
           <h1 class="text-4xl font-medium">A nice forum topic</h1>
           <div class="text-slate-700 space-y-3`">
@@ -26,7 +26,7 @@
             </p>
           </div>
 
-          <div class="flex items-center space-x-5 mt-auto">
+          <div class="flex flex-col md:flex-row md:items-center space-y-3 md:space-x-5 md:space-y-0 mt-auto">
             <div class="flex items-center">
               <user-circle-icon class="h-12 text-slate-500" />
               <div class="ml-2">
@@ -34,21 +34,23 @@
                 <p class="text-slate-500 text-sm">5 minutes ago</p>
               </div>
             </div>
-            <custom-button-action class="space-x-2">
-              <heart-icon class="h-5" />
-              <span>19 likes</span>
-            </custom-button-action>
-            <custom-button-action class="space-x-2">
-              <chat-bubble-oval-left-ellipsis-icon class="h-5" />
-              <span>2 comments</span>
-            </custom-button-action>
-            <custom-button-action class="space-x-2">
-              <share-icon class="h-5" />
-              <span>Share</span>
-            </custom-button-action>
-            <custom-button-action class="space-x-2">
-              <bookmark-icon class="h-5" />
-            </custom-button-action>
+            <div class="flex flex-wrap md:space-x-2 xl:space-x-5">
+              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+                <heart-icon class="h-5" />
+                <span>19 likes</span>
+              </custom-button-action>
+              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+                <chat-bubble-oval-left-ellipsis-icon class="h-5" />
+                <span>2 comments</span>
+              </custom-button-action>
+              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+                <share-icon class="h-5" />
+                <span>Share</span>
+              </custom-button-action>
+              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+                <bookmark-icon class="h-5" />
+              </custom-button-action>
+            </div>
           </div>
         </layout-card>
 
@@ -56,6 +58,7 @@
           <h5 class="text-xl font-medium">Forum responses</h5>
           <filter-order label="Order responses by" />
         </div>
+        
         <layout-card>
           <div class="-mx-5">
             <blog-comment />

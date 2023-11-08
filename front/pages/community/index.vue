@@ -6,12 +6,12 @@
         context="See what's going on around you"
       />
 
-      <div class="grid grid-cols-2 gap-10">
+      <div class="grid md:grid-cols-2 gap-10">
         <community-group v-for="i in 3" :key="i" />
       </div>
       
-      <div class="grid grid-cols-2 gap-10">
-        <div class="col-span-2 space-y-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="md:col-span-2 space-y-4">
           
           <div class="space-y-1">
             <h1 class="text-3xl font-medium">Forums</h1>
