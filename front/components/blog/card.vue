@@ -1,12 +1,12 @@
 <template>
   <layout-card
-    :class="primary ? 'col-span-2 grid grid-cols-2 gap-4' : 'flex flex-col'"
+    :class="primary ? 'md:col-span-2 flex flex-col md:grid md:grid-cols-2 gap-4' : 'flex flex-col'"
   >
     <div class="relative">
       <nuxt-link :to="`/blog/${story.slug}`">
         <img
           class="w-full object-cover object-center rounded-lg"
-          :class="{ 'h-64': !primary }"
+          :class="{ 'h-64': !primary, 'h-full': primary }"
           :src="story.image.urls.regular"
           :alt="story.image.description"
         />
@@ -38,20 +38,20 @@
           <p class="text-slate-500 text-sm">5 minutes ago</p>
         </div>
       </nuxt-link>
-      <div class="flex items-center space-x-5 mt-auto">
-        <custom-button-action class="space-x-2">
+      <div class="flex items-center flex-wrap mt-auto">
+        <custom-button-action class="space-x-2 mr-5 mb-2">
           <heart-icon class="h-5" />
-          <span>19 likes</span>
+          <span>19 <span class="hidden md:inline"> likes</span></span>
         </custom-button-action>
-        <custom-button-action class="space-x-2">
+        <custom-button-action class="space-x-2 mr-5 mb-2">
           <chat-bubble-oval-left-ellipsis-icon class="h-5" />
-          <span>2 comments</span>
+          <span>2 <span class="hidden md:inline"> comments</span></span>
         </custom-button-action>
-        <custom-button-action class="space-x-2">
+        <custom-button-action class="space-x-2 mr-5 mb-2">
           <share-icon class="h-5" />
-          <span>Share</span>
+          <span class="hidden md:inline">Share</span>
         </custom-button-action>
-        <custom-button-action class="space-x-2">
+        <custom-button-action class="space-x-2 mr-5 mb-2">
           <bookmark-icon class="h-5" />
         </custom-button-action>
       </div>

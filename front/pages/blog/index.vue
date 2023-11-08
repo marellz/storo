@@ -1,12 +1,11 @@
 <template>
   <layout-container>
-    <div>
       <layout-salutation
         main="Blog"
         context="Check out the latest and popular articles"
       />
-      <div class="grid grid-cols-3 gap-4">
-        <div class="col-span-2">
+      <div class="grid 2xl:grid-cols-3 gap-4 items-start">
+        <div class="2xl:col-span-2">
           <custom-tabs default-tab="latest" :tabs="tabs">
             <template #action>
               <li class="py-1">
@@ -14,7 +13,7 @@
               </li>
             </template>
             <template #latest>
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid md:grid-cols-2 gap-4">
                 <blog-card
                   v-for="(story, index) in data.stories"
                   :key="index"
@@ -26,12 +25,11 @@
           </custom-tabs>
         </div>
       
-        <div class="space-y-4 mt-[90px]">
+        <div class="grid md:grid-cols-2 2xl:grid-cols-1 items-start gap-2 2xl:space-y-4 2xl:mt-[90px]">
           <blog-subscription-form />
           <blog-author title="Top author" />
         </div>
       </div>
-    </div>
   </layout-container>
 </template>
 <script lang="ts" setup>

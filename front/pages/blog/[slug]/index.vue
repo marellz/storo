@@ -1,27 +1,23 @@
 <template>
   <layout-container>
     <!-- <layout-salutation :main="" :context=""></layout-salutation> -->
-    <div class="grid grid-cols-3 gap-10">
-      <div class="space-y-10">
-        <div class="relative" v-if="data.story.image">
-          <img
-            class="rounded-lg sticky"
-            :src="data.story.image.urls.full"
-            :alt="data.story.image.description"
-          />
-          <p class="text-slate-500 mt-2 italic">
-            Photo by
-            {{ data.story.image.creator.name }}
-          </p>
-          <p
-            class="absolute bottom-0 z-10 bg-slate-00 py-1 px-3 text-sm text-white rounded-tr rounded-bl-lg"
-          ></p>
-        </div>
-
-        <blog-author title="About the author" />
-        
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-10">
+      
+      <div class="relative" v-if="data.story.image">
+        <img
+          class="rounded-lg sticky"
+          :src="data.story.image.urls.full"
+          :alt="data.story.image.description"
+        />
+        <p class="text-slate-500 mt-2 italic text-sm lg:text-base">
+          Photo by
+          {{ data.story.image.creator.name }}
+        </p>
       </div>
-      <div class="col-span-2 space-y-10">
+
+      <blog-author class="row-start-3 xl:row-start-2 -order-1" title="About the author" />
+
+      <div class="xl:col-span-2 xl:row-span-2">
         <layout-card class="space-y-10">
           <div>
             <h1 class="text-4xl font-semibold">
@@ -31,20 +27,20 @@
               {{ data.story.excerpt }}
             </p>
           </div>
-          <div class="flex items-center space-x-5 mt-auto">
-            <custom-button-action class="space-x-2">
+          <div class="flex flex-wrap items-center mt-auto">
+            <custom-button-action class="space-x-2 mb-2 mr-5">
               <heart-icon class="h-5" />
               <span>19 likes</span>
             </custom-button-action>
-            <custom-button-action class="space-x-2">
+            <custom-button-action class="space-x-2 mb-2 mr-5">
               <chat-bubble-oval-left-ellipsis-icon class="h-5" />
               <span>2 comments</span>
             </custom-button-action>
-            <custom-button-action class="space-x-2">
+            <custom-button-action class="space-x-2 mb-2 mr-5">
               <share-icon class="h-5" />
               <span>Share</span>
             </custom-button-action>
-            <custom-button-action class="space-x-2">
+            <custom-button-action class="space-x-2 mb-2 mr-5">
               <bookmark-icon class="h-5" />
             </custom-button-action>
           </div>
@@ -53,7 +49,8 @@
             v-html="data.story.content"
           ></div>
         </layout-card>
-        <layout-card class="space-y-10 px-0">
+      </div>
+      <layout-card class="xl:col-span-2 xl:col-start-2 space-y-10 px-0">
           <div class="flex justify-between px-5">
             <h2 class="text-xl font-semibold">Comments</h2>
 
@@ -64,7 +61,6 @@
             <blog-comment />
           </div>
         </layout-card>
-      </div>
     </div>
   </layout-container>
 </template>
