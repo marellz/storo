@@ -19,6 +19,7 @@
           :class="{
             'text-white': active,
             'text-prussian-blue font-bold': unread,
+            '!text-white': active && unread
           }"
         >
           5 minutes ago
