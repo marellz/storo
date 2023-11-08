@@ -35,19 +35,19 @@
               </div>
             </div>
             <div class="flex flex-wrap md:space-x-2 xl:space-x-5">
-              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+              <custom-button-action class="mr-2 mb-2 md:m-0">
                 <heart-icon class="h-5" />
                 <span>19 likes</span>
               </custom-button-action>
-              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+              <custom-button-action class="mr-2 mb-2 md:m-0">
                 <chat-bubble-oval-left-ellipsis-icon class="h-5" />
                 <span>2 comments</span>
               </custom-button-action>
-              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+              <custom-button-action class="mr-2 mb-2 md:m-0">
                 <share-icon class="h-5" />
                 <span>Share</span>
               </custom-button-action>
-              <custom-button-action class="space-x-2 mr-2 mb-2 md:m-0">
+              <custom-button-action class="mr-2 mb-2 md:m-0">
                 <bookmark-icon class="h-5" />
               </custom-button-action>
             </div>

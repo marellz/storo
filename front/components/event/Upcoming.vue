@@ -23,7 +23,7 @@
           <custom-button-action>
             <bookmark-icon class="h-5" />
           </custom-button-action>
-          <custom-button-action class="space-x-2">
+          <custom-button-action>
             <span>Going</span>
             <star-icon class="h-5" />
           </custom-button-action>

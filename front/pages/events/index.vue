@@ -6,12 +6,13 @@
         <div class="xl:col-span-2 row-start-2 xl:row-start-1">
           <custom-tabs default-tab="upcoming" :tabs="tabs">
             <template #action>
-              <li class="py-1">
-                <custom-button-action
-                  class="bg-tufts-blue text-white border-tufts-blue"
-                  >Create an event</custom-button-action
+              <custom-button-action
+                class="bg-tufts-blue text-white border-tufts-blue"
                 >
-              </li>
+                <span>Create an event</span>
+                <plus-icon class="h-5" />
+                </custom-button-action
+              >
             </template>
 
             <template #upcoming>
@@ -35,13 +36,18 @@
           </custom-tabs>
         </div>
         <div class="xl:mt-[134px]">
-          <event-month-select :selected="selectedMonth" @update:month="updateSelection" />
+          <event-month-select
+            :selected="selectedMonth"
+            @update:month="updateSelection"
+          />
         </div>
       </div>
     </div>
   </layout-container>
 </template>
 <script lang="ts" setup>
+import { PlusIcon } from '@heroicons/vue/24/outline';
+
 const tabs = ref([
   {
     key: "upcoming",
@@ -79,13 +85,12 @@ const eventsInfo = ref([
   },
 ]);
 
-const currentMonth = computed(()=>{
-  let d = new Date()
-  return d.getMonth()
+const currentMonth = computed(() => {
+  let d = new Date();
+  return d.getMonth();
 });
 
-const updateSelection = (month: number) => selectedMonth.value = month
+const updateSelection = (month: number) => (selectedMonth.value = month);
 
-const selectedMonth = ref(currentMonth.value)
-
+const selectedMonth = ref(currentMonth.value);
 </script>

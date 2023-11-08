@@ -16,15 +16,15 @@
         <p class="font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt quo odit porro beatae, aut cumque, illo ad debitis minus doloribus numquam, eius magnam dolore! Iusto distinctio est quod rem? Modi.</p>
     </div>
     <div class="flex items-center space-x-5">
-        <custom-button-action class="space-x-2">
+        <custom-button-action>
             <heart-icon class="h-5"/>
             <span>19 <span class="hidden md:inline">likes</span></span>
         </custom-button-action>
-        <custom-button-action class="space-x-2">
+        <custom-button-action>
             <chat-bubble-oval-left-ellipsis-icon class="h-5"/>
             <span>2 <span class="hidden md:inline">comments</span></span>
         </custom-button-action>
-        <custom-button-action class="space-x-2">
+        <custom-button-action>
             <share-icon class="h-5"/>
             <span><span class="hidden md:inline">Share</span></span>
         </custom-button-action>

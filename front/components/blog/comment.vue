@@ -24,11 +24,11 @@
       </div>
     </div>
     <div class="flex items-center space-x-5">
-      <custom-button-action class="space-x-2">
+      <custom-button-action>
         <heart-icon class="h-5" />
         <span>19 likes</span>
       </custom-button-action>
-      <custom-button-action class="space-x-2">
+      <custom-button-action>
         <chat-bubble-oval-left-ellipsis-icon class="h-5" />
         <span>2 comments</span>
       </custom-button-action>

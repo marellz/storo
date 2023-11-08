@@ -39,19 +39,19 @@
         </div>
       </nuxt-link>
       <div class="flex items-center flex-wrap mt-auto">
-        <custom-button-action class="space-x-2 mr-5 mb-2">
+        <custom-button-action class="mr-5 mb-2">
           <heart-icon class="h-5" />
           <span>19 <span class="hidden md:inline"> likes</span></span>
         </custom-button-action>
-        <custom-button-action class="space-x-2 mr-5 mb-2">
+        <custom-button-action class="mr-5 mb-2">
           <chat-bubble-oval-left-ellipsis-icon class="h-5" />
           <span>2 <span class="hidden md:inline"> comments</span></span>
         </custom-button-action>
-        <custom-button-action class="space-x-2 mr-5 mb-2">
+        <custom-button-action class="mr-5 mb-2">
           <share-icon class="h-5" />
           <span class="hidden md:inline">Share</span>
         </custom-button-action>
-        <custom-button-action class="space-x-2 mr-5 mb-2">
+        <custom-button-action class="mr-5 mb-2">
           <bookmark-icon class="h-5" />
         </custom-button-action>
       </div>

@@ -8,9 +8,10 @@
         <div class="2xl:col-span-2">
           <custom-tabs default-tab="latest" :tabs="tabs">
             <template #action>
-              <li class="py-1">
-                <custom-button-action class="bg-tufts-blue text-white border-tufts-blue">Create a blog post</custom-button-action>
-              </li>
+                <custom-button-action class="bg-tufts-blue text-white border-tufts-blue">
+                  <span>Create a blog post</span>
+                  <plus-icon class="h-5" />
+                </custom-button-action>
             </template>
             <template #latest>
               <div class="grid md:grid-cols-2 gap-4">
@@ -33,6 +34,7 @@
   </layout-container>
 </template>
 <script lang="ts" setup>
+import { PlusIcon } from '@heroicons/vue/24/outline';
 const { data } = await useFetch("http://localhost:8000/api/stories");
 const tabs = ref([
   {

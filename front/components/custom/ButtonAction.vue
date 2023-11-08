@@ -1,7 +1,7 @@
 <template>
   <button
     :type="type"
-    class="inline-flex items-center justify-center py-2 px-2 rounded-lg font-medium leading-5"
+    class="inline-flex items-center justify-center py-2 px-2 rounded-lg font-medium leading-5 space-x-2"
     :class="colors[color] ?? colors['info']"
   >
     <slot />
