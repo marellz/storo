@@ -1,7 +1,7 @@
 <template>
   <layout-container>
-    <div class="grid grid-cols-3 gap-4">
-      <div class="col-span-2 p-2">
+    <div class="grid lg:grid-cols-2 gap-4">
+      <div class=" p-2">
         <layout-salutation
           main="Good morning User"
           context="What's new with you?"
