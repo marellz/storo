@@ -1,6 +1,6 @@
 <template>
   <layout-card class="flex flex-col xl:flex-row xl:space-x-3">
-    <div class="flex space-x-3 mt-3 xl:mt-0">
+    <div class="flex flex-auto space-x-3 mt-3 xl:mt-0">
       <nuxt-link
         :to="link"
         class="block bg-slate-100 rounded-lg p-5 text-center self-start w-20"
