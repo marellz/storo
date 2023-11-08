@@ -25,7 +25,7 @@
 
     <slot name="help">
       <div class="mt-2 text-sm text-slate-500 flex items-center space-x-2" v-if="help">
-        <question-mark-circle-icon class="h-5" />
+        <information-circle-icon class="h-5" />
         <span>
           {{ help }}
         </span>
@@ -34,7 +34,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
+import { InformationCircleIcon } from '@heroicons/vue/24/outline'
 const props = defineProps({
   modelValue: {
     type: [String, Number, Boolean, Object],
