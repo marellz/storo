@@ -17,5 +17,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: ['@pinia/nuxt'],
   css: ["~/assets/scss/app.scss"],
 });
