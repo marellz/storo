@@ -11,13 +11,12 @@
       <div class="xl:col-span-2 space-y-10">
         <layout-card class="space-y-5">
           <div class="flex items-center space-x-4">
-            <nuxt-link
-              :to="link"
+            <div
               class="block bg-slate-100 rounded-lg p-5 text-center self-start w-20"
             >
               <p class="text-4xl font-bold">13</p>
               <p class="uppercase text-slate-500">OCt</p>
-            </nuxt-link>
+            </div>
             <div class="space-y-3">
               <h1 class="text-2xl xl:text-3xl font-bold">Fundraising event for the band</h1>
 
