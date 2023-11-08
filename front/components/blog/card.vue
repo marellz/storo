@@ -1,6 +1,10 @@
 <template>
   <layout-card
-    :class="primary ? 'md:col-span-2 flex flex-col md:grid md:grid-cols-2 gap-4' : 'flex flex-col'"
+    :class="
+      primary
+        ? 'md:col-span-2 flex flex-col md:grid md:grid-cols-2 gap-4'
+        : 'flex flex-col'
+    "
   >
     <div class="relative">
       <nuxt-link :to="`/blog/${story.slug}`">
@@ -24,10 +28,7 @@
         <h2 class="font-medium text-3xl" :class="{ '!text-4xl': primary }">
           {{ story.title }}
         </h2>
-        <p
-          class="opacity-50 line-clamp-4 mt-2"
-          :class="{ 'text-lg': primary }"
-        >
+        <p class="opacity-50 line-clamp-4 mt-2" :class="{ 'text-lg': primary }">
           {{ story.excerpt }}
         </p>
       </nuxt-link>
@@ -38,34 +39,18 @@
           <p class="text-slate-500 text-sm">5 minutes ago</p>
         </div>
       </nuxt-link>
-      <div class="flex items-center flex-wrap mt-auto">
-        <custom-button-action class="mr-5 mb-2">
-          <heart-icon class="h-5" />
-          <span>19 <span class="hidden md:inline"> likes</span></span>
-        </custom-button-action>
-        <custom-button-action class="mr-5 mb-2">
-          <chat-bubble-oval-left-ellipsis-icon class="h-5" />
-          <span>2 <span class="hidden md:inline"> comments</span></span>
-        </custom-button-action>
-        <custom-button-action class="mr-5 mb-2">
-          <share-icon class="h-5" />
-          <span class="hidden md:inline">Share</span>
-        </custom-button-action>
-        <custom-button-action class="mr-5 mb-2">
-          <bookmark-icon class="h-5" />
-        </custom-button-action>
-      </div>
+      <actions-wrap class="mt-auto">
+        <actions-like />
+        <actions-comment />
+        <actions-share />
+        <actions-bookmark />
+      </actions-wrap>
     </div>
   </layout-card>
 </template>
 <script lang="ts" setup>
 import { UserCircleIcon } from "@heroicons/vue/24/solid";
-import {
-  BookmarkIcon,
-  HeartIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  ShareIcon,
-} from "@heroicons/vue/24/outline";
+
 defineProps({
   story: {
     type: Object,

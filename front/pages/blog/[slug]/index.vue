@@ -27,23 +27,12 @@
               {{ data.story.excerpt }}
             </p>
           </div>
-          <div class="flex flex-wrap items-center mt-auto">
-            <custom-button-action class="mb-2 mr-5">
-              <heart-icon class="h-5" />
-              <span>19 likes</span>
-            </custom-button-action>
-            <custom-button-action class="mb-2 mr-5">
-              <chat-bubble-oval-left-ellipsis-icon class="h-5" />
-              <span>2 comments</span>
-            </custom-button-action>
-            <custom-button-action class="mb-2 mr-5">
-              <share-icon class="h-5" />
-              <span>Share</span>
-            </custom-button-action>
-            <custom-button-action class="mb-2 mr-5">
-              <bookmark-icon class="h-5" />
-            </custom-button-action>
-          </div>
+          <actions-wrap class="mt-auto">
+            <actions-like />
+            <actions-comment />
+            <actions-share />
+            <actions-bookmark />
+          </actions-wrap>
           <div
             class="text-xl leading-9 space-y-3"
             v-html="data.story.content"
@@ -66,12 +55,6 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  BookmarkIcon,
-  HeartIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  ShareIcon,
-} from "@heroicons/vue/24/outline";
 
 const route = useRoute();
 const slug = route.params.slug;
