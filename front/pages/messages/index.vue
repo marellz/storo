@@ -61,5 +61,5 @@ const selectThread = (index: number) => {
   selectedThread.value = index;
 };
 
-const sendMessage = () => console.log("sending");
+const sendMessage = () => {};
 </script>

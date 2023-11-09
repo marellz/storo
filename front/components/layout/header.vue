@@ -61,8 +61,4 @@ const links = ref([
   },
 ]);
 
-onMounted(() => {
-  console.log(auth.hasAuth);
-  
-})
 </script>

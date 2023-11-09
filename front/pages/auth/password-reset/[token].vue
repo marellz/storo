@@ -27,8 +27,5 @@ const user = ref({
 
 const resetPassword = async () => {
   user.value.token = token
-
-  console.log(user);
-  
 }
 </script>
